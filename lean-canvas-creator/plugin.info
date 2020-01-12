@@ -1,0 +1,9 @@
+{
+    "title": "$:/plugins/absamma/lean-canvas-creator",
+    "description": "Create Lean Canvases",
+    "author": "Abraham Samma",
+    "version": "0.0.1",
+    "core-version": ">=5.1.18",
+    "plugin-type": "plugin",
+    "list": "readme"
+}

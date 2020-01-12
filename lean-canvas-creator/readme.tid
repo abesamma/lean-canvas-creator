@@ -1,0 +1,17 @@
+title: $:/plugins/absamma/lean-canvas-creator/readme
+
+The Lean canvas creator allows you to create lean canvases for your lean project or startup. Press the {{$:/plugins/absamma/lean-canvas-creator/icon}} button to your right
+to create your first project. You can take this notebook with you as a single file html to use on the go by clicking the save button {{$:/core/ui/Buttons/save-wiki}} to your right.
+
+To use this plugin in your own [[tiddlywiki notebook|https://tiddlywiki.com]] or [[Maarfapad hosted|http://maarfapad.com]] notebook, download the files:
+
+<$button>
+<$action-sendmessage $message="tm-download-file" $param="$:/plugins/absamma/lean-canvas-creator" filename="lean-canvas-creator-plugin.json"/>
+Here
+</$button>
+
+and import them into your notebook, then save and refresh.
+
+Or, [[drag and drop this link|$:/plugins/absamma/lean-canvas-creator]] into your notebook.
+
+For more information on what the Lean canvas is, [[click here|http://ift.tt/2hAH0bX]]
