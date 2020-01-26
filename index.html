@@ -145,6 +145,8 @@ Error message and password prompt
 
 <li>$:/DefaultTiddlers</li>
 
+<li>$:/Import</li>
+
 <li>$:/isEncrypted</li>
 
 <li>$:/plugins/absamma/lean-canvas-creator</li>
@@ -9377,10 +9379,15 @@ Error message and password prompt
 <div created="20200113211649739" modified="20200113211649739" title="$:/DefaultTiddlers">
 <pre>[list[$:/StoryList]]</pre>
 </div>
+<div status="complete" title="$:/Import">
+<pre>The following tiddlers were imported:
+
+# [[$:/plugins/absamma/lean-canvas-creator]]</pre>
+</div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div author="Abraham Samma" core-version="&gt;=5.1.18" dependents="" description="Create Lean Canvases" list="readme" plugin-type="plugin" source="github.com/abesamma/lean-canvas-creator/" title="$:/plugins/absamma/lean-canvas-creator" type="application/json" version="0.2.0">
+<div author="Abraham Samma" core-version="&gt;=5.1.18" dependents="" description="Create Lean Canvases" list="readme" plugin-type="plugin" source="github.com/abesamma/lean-canvas-creator/" title="$:/plugins/absamma/lean-canvas-creator" type="application/json" version="0.2.1">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/plugins/absamma/lean-canvas-creator/readme&quot;: {
@@ -9535,7 +9542,7 @@ Error message and password prompt
         &quot;new-project-template&quot;: {
             &quot;created&quot;: &quot;20200108150956820&quot;,
             &quot;creator&quot;: &quot;A.B. Samma&quot;,
-            &quot;text&quot;: &quot;\\define tag() [[$(currentTiddler)$]]\n\n\\define title() New Canvas\n\n\\define filter()\n[prefix[$(currentTiddler)$]] [prefix[$(currentTiddler)$]tagging[]] [canvas[$(currentTiddler)$]] [project[$(currentTiddler)$]]\n\\end\n\n\\define state-tiddler() $:/state/$(currentTiddler)$\n\n\\define big-red-delete-button()\n&lt;$button class=\&quot;danger-delete-btn\&quot; to=\&quot;Overview\&quot;&gt;\n&lt;$action-sendmessage $message=\&quot;tm-notify\&quot; $param=\&quot;deletion-notification\&quot; /&gt;\n&lt;$action-deletetiddler $filter=&lt;&lt;filter&gt;&gt;/&gt;\nYes, Delete Project\n&lt;/$button&gt;\n\\end\n\n&lt;$button tooltip=\&quot;Go to Lean Projects Overview\&quot; to=\&quot;Overview\&quot;&gt;\n{{$:/core/images/left-arrow}}\nBack to Lean Projects Overview\n&lt;/$button&gt;\n&lt;$button tooltip=\&quot;Create New Lean Canvas\&quot;&gt;\n&lt;$action-createtiddler $basetitle=&lt;&lt;title&gt;&gt; tags=&lt;&lt;tag&gt;&gt; text=\&quot;{{||canvas-template}}\&quot; project=&lt;&lt;currentTiddler&gt;&gt; /&gt;\n&lt;$action-sendmessage $message=\&quot;tm-notify\&quot; $param=\&quot;create-canvas-notify\&quot; /&gt;\n&lt;$list filter=\&quot;[&lt;tv-config-toolbar-icons&gt;match[yes]]\&quot;&gt;\n{{create-canvas-icon.svg}} Create New Lean Canvas\n&lt;/$list&gt;\n&lt;/$button&gt;\n&lt;$button tooltip=\&quot;Delete Project\&quot; popup=&lt;&lt;state-tiddler&gt;&gt; setTo=\&quot;open\&quot;&gt;\n{{$:/core/images/delete-button}}\nDelete this Project\n&lt;/$button&gt;\n\n&lt;$reveal type=\&quot;popup\&quot; state=&lt;&lt;state-tiddler&gt;&gt;&gt;\n&lt;div class=\&quot;tc-drop-down\&quot;&gt;\n&lt;p&gt;''Are you sure you want to delete this project?''&lt;/p&gt;\n&lt;p&gt;''This operation is irreversible!''&lt;/p&gt;\n&lt;&lt;big-red-delete-button&gt;&gt;\n&lt;/div&gt;\n&lt;/$reveal&gt;\n\n!!! ''__&lt;&lt;currentTiddler&gt;&gt; canvases__'' \n!!!!! Sorted by oldest\n\n\n&lt;&lt;list-links [tag&lt;currentTiddler&gt;sort[created]]&gt;&gt;\n&quot;,
+            &quot;text&quot;: &quot;\\define tag() [[$(currentTiddler)$]]\n\n\\define title() $(currentTiddler)$ Canvas\n\n\\define filter()\n[prefix[$(currentTiddler)$]] [prefix[$(currentTiddler)$]tagging[]] [canvas[$(currentTiddler)$]] [project[$(currentTiddler)$]]\n\\end\n\n\\define state-tiddler() $:/state/$(currentTiddler)$\n\n\\define big-red-delete-button()\n&lt;$button class=\&quot;danger-delete-btn\&quot; to=\&quot;Overview\&quot;&gt;\n&lt;$action-sendmessage $message=\&quot;tm-notify\&quot; $param=\&quot;deletion-notification\&quot; /&gt;\n&lt;$action-deletetiddler $filter=&lt;&lt;filter&gt;&gt;/&gt;\nYes, Delete Project\n&lt;/$button&gt;\n\\end\n\n&lt;$button tooltip=\&quot;Go to Lean Projects Overview\&quot; to=\&quot;Overview\&quot;&gt;\n{{$:/core/images/left-arrow}}\nBack to Lean Projects Overview\n&lt;/$button&gt;\n&lt;$button tooltip=\&quot;Create New Lean Canvas\&quot;&gt;\n&lt;$action-createtiddler $basetitle=&lt;&lt;title&gt;&gt; tags=&lt;&lt;tag&gt;&gt; text=\&quot;{{||canvas-template}}\&quot; project=&lt;&lt;currentTiddler&gt;&gt; /&gt;\n&lt;$action-sendmessage $message=\&quot;tm-notify\&quot; $param=\&quot;create-canvas-notify\&quot; /&gt;\n&lt;$list filter=\&quot;[&lt;tv-config-toolbar-icons&gt;match[yes]]\&quot;&gt;\n{{create-canvas-icon.svg}} Create New Lean Canvas\n&lt;/$list&gt;\n&lt;/$button&gt;\n&lt;$button tooltip=\&quot;Delete Project\&quot; popup=&lt;&lt;state-tiddler&gt;&gt; setTo=\&quot;open\&quot;&gt;\n{{$:/core/images/delete-button}}\nDelete this Project\n&lt;/$button&gt;\n\n&lt;$reveal type=\&quot;popup\&quot; state=&lt;&lt;state-tiddler&gt;&gt;&gt;\n&lt;div class=\&quot;tc-drop-down\&quot;&gt;\n&lt;p&gt;''Are you sure you want to delete this project?''&lt;/p&gt;\n&lt;p&gt;''This operation is irreversible!''&lt;/p&gt;\n&lt;&lt;big-red-delete-button&gt;&gt;\n&lt;/div&gt;\n&lt;/$reveal&gt;\n\n!!! ''__&lt;&lt;currentTiddler&gt;&gt; canvases__'' \n!!!!! Sorted by oldest\n\n\n&lt;&lt;list-links [tag&lt;currentTiddler&gt;sort[created]]&gt;&gt;\n&quot;,
             &quot;tmap.id&quot;: &quot;bcd060fe-1b62-439e-b8dc-4ca383331edf&quot;,
             &quot;title&quot;: &quot;new-project-template&quot;,
             &quot;tags&quot;: &quot;[[Lean Canvas Project]]&quot;,
@@ -9640,8 +9647,8 @@ Error message and password prompt
 <div created="20200113211735621" modified="20200113211741327" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
-<div created="20200113211704420" modified="20200113211824394" title="$:/state/tab/sidebar--595412856">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20200113211704420" modified="20200126200426389" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div list="[[Read Me]]" title="$:/StoryList">
 <pre></pre>
@@ -9659,7 +9666,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/full&quot;: {
             &quot;title&quot;: &quot;$:/info/url/full&quot;,
-            &quot;text&quot;: &quot;file:///C:/Users/HP/Dev/lean%20canvas/lean-canvas-creator.html&quot;
+            &quot;text&quot;: &quot;file:///C:/Users/HP/Dev/lean%20canvas/index.html&quot;
         },
         &quot;$:/info/url/host&quot;: {
             &quot;title&quot;: &quot;$:/info/url/host&quot;,
@@ -9679,7 +9686,7 @@ Error message and password prompt
         },
         &quot;$:/info/url/pathname&quot;: {
             &quot;title&quot;: &quot;$:/info/url/pathname&quot;,
-            &quot;text&quot;: &quot;/C:/Users/HP/Dev/lean%20canvas/lean-canvas-creator.html&quot;
+            &quot;text&quot;: &quot;/C:/Users/HP/Dev/lean%20canvas/index.html&quot;
         },
         &quot;$:/info/url/search&quot;: {
             &quot;title&quot;: &quot;$:/info/url/search&quot;,
@@ -9816,10 +9823,14 @@ Error message and password prompt
 <div created="20200113211739477" modified="20200113211739478" title="$:/view">
 <pre>zoomin</pre>
 </div>
-<div created="20200113211744040" modified="20200113211930223" tags="" title="Read Me">
+<div created="20200113211744040" modified="20200126200216953" tags="" title="Read Me">
 <pre>{{$:/plugins/absamma/lean-canvas-creator/readme}}
 
-''14th January 2020 addendum'', new version 0.2.0 of the plugin is available.</pre>
+__Change Log__
+
+* ''26th January 2020'', new version 0.2.1 of the plugin is available. Includes a small change to title naming for new canvases. Previously would be labelled as &quot;New Canvas&quot;. Now the title will take the given name of the project, plus &quot;Canvas&quot;.
+* 14th January 2020, 0.2.0 of the plugin.
+</pre>
 </div>
 
 </div>
