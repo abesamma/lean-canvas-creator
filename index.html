@@ -9382,12 +9382,12 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[$:/plugins/absamma/lean-canvas-creator]]</pre>
+# [[Read Me]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div author="Abraham Samma" core-version="&gt;=5.1.18" dependents="" description="Create Lean Canvases" list="readme" plugin-type="plugin" source="github.com/abesamma/lean-canvas-creator/" title="$:/plugins/absamma/lean-canvas-creator" type="application/json" version="0.2.1">
+<div author="Abraham Samma" core-version="&gt;=5.1.18" dependents="" description="Create Lean Canvases" list="readme" plugin-type="plugin" source="github.com/abesamma/lean-canvas-creator/" title="$:/plugins/absamma/lean-canvas-creator" type="application/json" version="0.2.2">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/plugins/absamma/lean-canvas-creator/readme&quot;: {
@@ -9550,7 +9550,7 @@ Error message and password prompt
             &quot;modified&quot;: &quot;20200113210439186&quot;
         },
         &quot;Problem&quot;: {
-            &quot;text&quot;: &quot;\\define problem-tag()\n[[$(currentTiddler)$]] [[$(currentTiddler)$ Problem]]\n\\end\n\n\\define problem-filtertagparam()\n$(currentTiddler)$ Problem\n\\end\n\n\\define alt-tag()\n[[$(currentTiddler)$]] [[$(currentTiddler)$ Alternative]]\n\\end\n\n\\define alt-filtertagparam()\n$(currentTiddler)$ Alternative\n\\end\n\n\n''Problem''\n&lt;$button style=\&quot;border: none; font-size: 10px\&quot;&gt;\n➕\n&lt;$action-sendmessage $message=\&quot;tm-new-tiddler\&quot; tags=&lt;&lt;problem-tag&gt;&gt; title=\&quot;Problem item\&quot; canvas={{!!project}} /&gt;\nAdd item\n&lt;/$button&gt;\n\n&lt;ol&gt;\n&lt;$list filter=\&quot;[!has[draft.of]tag&lt;problem-filtertagparam&gt;sort[created]]\&quot;&gt;\n&lt;li style=\&quot;font-size: 12px\&quot;&gt;\n&lt;$link to={{!!title}}&gt;&lt;$view field=\&quot;title\&quot;/&gt;&lt;/$link&gt;\n&lt;$button message=\&quot;tm-delete-tiddler\&quot; param={{!!title}}  style=\&quot;border:none;\&quot;&gt;❎&lt;/$button&gt;\n&lt;/li&gt;\n&lt;/$list&gt;\n&lt;/ol&gt;\n\n\n\nExisting Alternatives\n&lt;$button style=\&quot;border: none; font-size: 10px\&quot;&gt;\n➕\n&lt;$action-sendmessage $message=\&quot;tm-new-tiddler\&quot; tags=&lt;&lt;alt-tag&gt;&gt; title=\&quot;Solution item\&quot; /&gt;\nAdd item\n&lt;/$button&gt;\n\n&lt;ol&gt;\n&lt;$list filter=\&quot;[!has[draft.of]tag&lt;alt-filtertagparam&gt;sort[created]]\&quot;&gt;\n&lt;li style=\&quot;font-size: 12px\&quot;&gt;\n&lt;$link to={{!!title}}&gt;&lt;$view field=\&quot;title\&quot;/&gt;&lt;/$link&gt;\n&lt;$button message=\&quot;tm-delete-tiddler\&quot; param={{!!title}}  style=\&quot;border:none;\&quot;&gt;❎&lt;/$button&gt;\n&lt;/li&gt;\n&lt;/$list&gt;\n&lt;/ol&gt;&quot;,
+            &quot;text&quot;: &quot;\\define problem-tag()\n[[$(currentTiddler)$]] [[$(currentTiddler)$ Problem]]\n\\end\n\n\\define problem-filtertagparam()\n$(currentTiddler)$ Problem\n\\end\n\n\\define alt-tag()\n[[$(currentTiddler)$]] [[$(currentTiddler)$ Alternative]]\n\\end\n\n\\define alt-filtertagparam()\n$(currentTiddler)$ Alternative\n\\end\n\n\n''Problem''\n&lt;$button style=\&quot;border: none; font-size: 10px\&quot;&gt;\n➕\n&lt;$action-sendmessage $message=\&quot;tm-new-tiddler\&quot; tags=&lt;&lt;problem-tag&gt;&gt; title=\&quot;Problem item\&quot; canvas={{!!project}} /&gt;\nAdd item\n&lt;/$button&gt;\n\n&lt;ol&gt;\n&lt;$list filter=\&quot;[!has[draft.of]tag&lt;problem-filtertagparam&gt;sort[created]]\&quot;&gt;\n&lt;li style=\&quot;font-size: 12px\&quot;&gt;\n&lt;$link to={{!!title}}&gt;&lt;$view field=\&quot;title\&quot;/&gt;&lt;/$link&gt;\n&lt;$button message=\&quot;tm-delete-tiddler\&quot; param={{!!title}}  style=\&quot;border:none;\&quot;&gt;❎&lt;/$button&gt;\n&lt;/li&gt;\n&lt;/$list&gt;\n&lt;/ol&gt;\n\n\n\nExisting Alternatives\n&lt;$button style=\&quot;border: none; font-size: 10px\&quot;&gt;\n➕\n&lt;$action-sendmessage $message=\&quot;tm-new-tiddler\&quot; tags=&lt;&lt;alt-tag&gt;&gt; title=\&quot;Existing Alternative\&quot; /&gt;\nAdd item\n&lt;/$button&gt;\n\n&lt;ol&gt;\n&lt;$list filter=\&quot;[!has[draft.of]tag&lt;alt-filtertagparam&gt;sort[created]]\&quot;&gt;\n&lt;li style=\&quot;font-size: 12px\&quot;&gt;\n&lt;$link to={{!!title}}&gt;&lt;$view field=\&quot;title\&quot;/&gt;&lt;/$link&gt;\n&lt;$button message=\&quot;tm-delete-tiddler\&quot; param={{!!title}}  style=\&quot;border:none;\&quot;&gt;❎&lt;/$button&gt;\n&lt;/li&gt;\n&lt;/$list&gt;\n&lt;/ol&gt;&quot;,
             &quot;tmap.id&quot;: &quot;6f5e3967-6d09-486f-b649-0d3c89991a1f&quot;,
             &quot;title&quot;: &quot;Problem&quot;,
             &quot;tags&quot;: &quot;canvas-template [[Lean Canvas Project]]&quot;,
@@ -9823,12 +9823,13 @@ Error message and password prompt
 <div created="20200113211739477" modified="20200113211739478" title="$:/view">
 <pre>zoomin</pre>
 </div>
-<div created="20200113211744040" modified="20200126200216953" tags="" title="Read Me">
+<div created="20200113211744040" modified="20200611121909269" tags="" title="Read Me">
 <pre>{{$:/plugins/absamma/lean-canvas-creator/readme}}
 
 __Change Log__
 
-* ''26th January 2020'', new version 0.2.1 of the plugin is available. Includes a small change to title naming for new canvases. Previously would be labelled as &quot;New Canvas&quot;. Now the title will take the given name of the project, plus &quot;Canvas&quot;.
+* ''11th June 2020'', new version 0.2.2 with minor fix to adding Existing Alternatives item. Previous version labelled such items as 'Solution item' instead of 'Existing Alternative item
+* 26th January 2020, new version 0.2.1 of the plugin is available. Includes a small change to title naming for new canvases. Previously would be labelled as &quot;New Canvas&quot;. Now the title will take the given name of the project, plus &quot;Canvas&quot;.
 * 14th January 2020, 0.2.0 of the plugin.
 </pre>
 </div>
